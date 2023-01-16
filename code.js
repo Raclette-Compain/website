@@ -1,7 +1,8 @@
 
 
 let cool =3;
-do(cool) {
+do(cool)
+{
     alert("cool")
 
 };
