@@ -1,8 +1,3 @@
 
 
-let cool =3;
-do(cool)
-{
-    alert("cool")
-
-};
+alert("Bienvenue sur notr site")
