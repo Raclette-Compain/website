@@ -1,3 +1,4 @@
 
-
-alert("Bienvenue sur notr site")
+var nom=prompt("Quel est votre nom")
+alert("Bienvenue sur notre site"+nom)
+console.log(nom)
