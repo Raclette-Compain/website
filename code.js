@@ -1,6 +1,6 @@
 
 var nom=prompt("Quel est votre nom")
-alert("Bienvenue sur notre site"+nom)
+alert("Bienvenue sur notre site"+' '+nom)
 console.log(nom)
 function username (){
     let user_name =prompt("enter user_name ")
