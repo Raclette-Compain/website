@@ -8,15 +8,38 @@
     <script src="English.html"></script>
     <script src="french.html"></script>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/odstemplik" type="text/css"/>
+    <script src="code2.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+        }
+      </script>
+      <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+      <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.ready(function() {
+            grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+            });
+          });
+        }
+    </script>
+
     
 </head>
 <body>
+    <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
     <style>
         body{
             background-color:royalblue;
         }
         h1{
-            color: red;
+            color: white;
             font-family: 'odstemplikRegular';
    font-weight: normal;
    font-style: normal;
@@ -28,13 +51,15 @@
 
     </h1>
     <br>
-    <br/>
+</br>
     <button onclick="window.location.href = 'https://ski235.github.io/website/french.html';">Français</button>
-    <br>
+    <br> </br>
     <button onclick="window.location.href = 'https://ski235.github.io/website/English.html';">English</button>
+</br>
+    <button onclick="username()"> login as admin</button>
     
 
-    <p></p>
+    
     
 </body>
 </html>
